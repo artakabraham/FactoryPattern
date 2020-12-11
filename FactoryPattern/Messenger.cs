@@ -34,6 +34,10 @@ namespace FactoryPattern
             {
                 throw new ArgumentNullException(nameof(source), "Sender's name cannot be empty!");
             }
+            if (string.IsNullOrWhiteSpace(target))
+            {
+                throw new ArgumentNullException(nameof(source), "Receiver's name cannot be empty!");
+            }
             if (text.Length > 140)
             {
                 throw new ArgumentException("Message text cannot be more than 140 symbols!", nameof(text));
