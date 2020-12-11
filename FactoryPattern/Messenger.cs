@@ -24,6 +24,22 @@ namespace FactoryPattern
             }
         }
 
+        public void SendMessage(string text, string source, string target)
+        {
+            if (string.IsNullOrWhiteSpace(text))
+            {
+                throw new ArgumentNullException(nameof(text), "The message text cannot be empty!");
+            }
+            if (string.IsNullOrWhiteSpace(source))
+            {
+                throw new ArgumentNullException(nameof(source), "Sender's name cannot be empty!");
+            }
+            if (text.Length > 140)
+            {
+                throw new ArgumentException("Message text cannot be more than 140 symbols!", nameof(text));
+            }
+        }
+
         private bool ConnectToTwitter()
         {
             // TODO: Request to Twitter API 
