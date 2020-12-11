@@ -42,6 +42,14 @@ namespace FactoryPattern
             {
                 throw new ArgumentException("Message text cannot be more than 140 symbols!", nameof(text));
             }
+            Message message = new Message(text, source, target);
+            SendMessageToTwitter(message);
+        }
+
+        private void SendMessageToTwitter(Message message)
+        {
+            // TODO: Request to twitter API to send a message;
+            Console.WriteLine($"Twitter {message.Text}");
         }
 
         private bool ConnectToTwitter()
