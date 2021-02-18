@@ -9,7 +9,7 @@ namespace FactoryPattern
         string UserName { get; }
         string Password { get; }
         bool Connected { get; }
-        IMessage CreateMessage(string text, string target, string source);
+        public IMessage CreateMessage(string text, string target, string source);
         bool Authorize();
     }
 }
