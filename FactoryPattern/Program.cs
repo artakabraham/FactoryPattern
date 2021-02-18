@@ -7,7 +7,7 @@ namespace FactoryPattern
         static void Main(string[] args)
         {
             Messenger messenger = new Messenger("Usernmame", "Password");
-            messenger.SendMessage("Lorem Impus","From","To");
+            messenger.SendMessage("Lorem Impus", "From", "To");
         }
     }
 }
