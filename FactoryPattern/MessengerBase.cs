@@ -6,7 +6,7 @@ namespace FactoryPattern
 {
     public abstract class MessengerBase : IMessenger
     {
-        public string UserName { get; }
+        public string UserName { get; protected set; }
 
         public string Password { get; }
 

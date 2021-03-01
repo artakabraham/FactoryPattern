@@ -2,9 +2,9 @@
 {
     public interface IMessage
     {
-        string Text { get; set; }
-        string Target { get; set; }
-        string Source { get; set; }
+        public string Text { get; set; }
+        public string Target { get; set; }
+        public string Source { get; set; }
 
         void Send();
     }

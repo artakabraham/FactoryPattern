@@ -5,10 +5,11 @@ namespace FactoryPattern
     public abstract class MessageBase : IMessage
     {
         public string Text { get; set; }
-        public string Source { get; set; }
         public string Target { get; set; }
+        public string Source { get; set; }
+        
 
-        public MessageBase(string text, string source, string target)
+        public MessageBase(string text, string target, string source)
         {
             #region Checking input parameters
             if (string.IsNullOrWhiteSpace(text))
