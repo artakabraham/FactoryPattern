@@ -17,7 +17,7 @@ namespace FactoryPattern
 
         public override IMessage CreateMessage(string text, string target, string source)
         {
-            var message = new TwitterMessage(source, target, text);
+            var message = new TwitterMessage(text, target, source);
             return message;
         }
     }

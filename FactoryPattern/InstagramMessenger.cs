@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace FactoryPattern
 {
@@ -17,9 +15,9 @@ namespace FactoryPattern
             return true;
         }
 
-        public override IMessage CreateMessage(string text, string target, string source)
+        public override IMessage CreateMessage(string text, string source, string target)
         {
-            var message = new InstagramMessage(source, target, text);
+            var message = new InstagramMessage(text, source, target);
             return message;
         }
     }

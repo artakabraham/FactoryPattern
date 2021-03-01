@@ -13,10 +13,6 @@ namespace FactoryPattern
                 var base64string = Convert.ToBase64String(imageBytes);
                 Text = base64string;
             }
-            else
-            {
-                Text = text.Substring(0, 140);
-            }
         }
 
         public override void Send()

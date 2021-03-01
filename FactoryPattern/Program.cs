@@ -6,23 +6,21 @@ namespace FactoryPattern
     {
         static void Main(string[] args)
         {
-            //Messenger messenger = new Messenger("Usernmame", "Password");
-            //messenger.SendMessage("Lorem Impus", "From", "To");
-
+            
             var twitter = new TwitterMessenger("UserName", "Password");
-            var twitterMsg = twitter.CreateMessage("Mustafa","Ibrahim","Hello my friend");
+            var twitterMsg = twitter.CreateMessage("Hello my friend", "Mustafa", "Ibrahim");
             twitterMsg.Send();
 
-
-            //var instagram = new InstagramMessenger("Username","Password");         
-            //var instagramMsg = new InstagramMessage("InstagramUser", "InstagramUser", "Please, like this page!");
-            //instagramMsg.Send();
-
-
-            //var instagram = new InstagramMessenger("Username","Password");         
-            //var twitter = new TwitterMessage("InstagramUser", "InstagramUser", "Please, like this page!");
-            //twitter.Send();
-
+            var instagram = new InstagramMessenger("Username", "Password");
+            if (instagram.Connected)
+            {
+                var instagramMsg = instagram.CreateMessage("photo.jfif", "InstagramUser" , "InstagramUser");
+                instagramMsg.Send();
+            }
+            else
+            {
+                Console.WriteLine("Connection failed");
+            }
         }
     }
 }

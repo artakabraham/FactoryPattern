@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace FactoryPattern
+﻿namespace FactoryPattern
 {
     public abstract class MessengerBase : IMessenger
     {
