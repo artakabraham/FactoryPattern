@@ -19,7 +19,7 @@ namespace FactoryPattern
         public override void Send()
         {
             // TODO:
-            Console.WriteLine($"Twitter Twitt from {Source} To {Target}: {Text}");
+            Console.WriteLine($"Twitter: Twitt from {Source} To {Target}: {Text}");
         }
     }
 }
