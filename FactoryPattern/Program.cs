@@ -12,7 +12,17 @@ namespace FactoryPattern
             var twitter = new TwitterMessenger("UserName", "Password");
             var twitterMsg = twitter.CreateMessage("Mustafa","Ibrahim","Hello my friend");
             twitterMsg.Send();
-             
+
+
+            //var instagram = new InstagramMessenger("Username","Password");         
+            //var instagramMsg = new InstagramMessage("InstagramUser", "InstagramUser", "Please, like this page!");
+            //instagramMsg.Send();
+
+
+            //var instagram = new InstagramMessenger("Username","Password");         
+            //var twitter = new TwitterMessage("InstagramUser", "InstagramUser", "Please, like this page!");
+            //twitter.Send();
+
         }
     }
 }

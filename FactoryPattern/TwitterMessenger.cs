@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace FactoryPattern
 {
@@ -10,7 +8,6 @@ namespace FactoryPattern
         {
 
         }
-
 
         public override bool Authorize()
         {

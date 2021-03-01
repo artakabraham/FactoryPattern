@@ -11,7 +11,6 @@ namespace FactoryPattern
 
         }
 
-
         public override bool Authorize()
         {
             Console.WriteLine("Authorize on Instagram");
