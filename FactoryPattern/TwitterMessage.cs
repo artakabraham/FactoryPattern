@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace FactoryPattern
 {
@@ -8,11 +6,20 @@ namespace FactoryPattern
     {
         public TwitterMessage(string text, string source, string target) : base(text, source, target)
         {
+            if (text.Length <= 140)
+            {
+                Text = text;
+            }
+            else
+            {
+                Text = text.Substring(0, 140);
+            }
         }
 
         public override void Send()
         {
-            throw new NotImplementedException();
+            // TODO:
+            Console.WriteLine($"Twitter Twitt from {Source} To {Target}: {Text}");
         }
     }
 }
